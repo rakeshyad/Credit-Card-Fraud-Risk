@@ -423,11 +423,8 @@ The first app refers to the filename app.py. The second app refers the instance 
 
 
 ### 7.	Browse deployed URL
-   Github Repository Link
+   App Repository Link
             https://lendingclubloanriskpredict-api.herokuapp.com/
             
 
-### 8.	Download full project
-   Project Link 
-        https://github.com/BHAVI2803/LENDING_CLUB_DEPLOYMENT
 
