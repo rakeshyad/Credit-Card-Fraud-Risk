@@ -1,0 +1,49 @@
+*{ 
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+ }
+
+.logo{
+  width: 120px;
+  cursor: pointer;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  color: black;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after{
+  content:'';
+  height: 3px;
+  width: 100%;
+  background: #009688;
+  position: absolute;
+  left:0;
+  right:0;
+
+}
+
+.content{
+  color:black;
+}
+
+.content h1{
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}

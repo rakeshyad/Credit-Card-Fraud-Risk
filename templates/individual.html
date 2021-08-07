@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Loan Status Predictor</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/sample.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="header">
+        <nav>
+            <a href="/">
+			<img src="{{url_for('static', filename='images/logo.png')}}" style="width: 100px;
+  height: 100px;">
+            
+            </a>
+            <div class="nav-links">
+            <ul>
+                <li><a href="/" >HOME</a></li>
+                <li><a href="loanpred" >LOAN PREDICTION</a> </li>
+                <li><a href="individual" >INDIVIDUAL LOAN</a> </li>
+                <li><a href="joint" >JOINT LOAN</a> </li>
+                </ul></div>
+            </nav>
+       <div class="inputform">
+    <div class="title">Give your details-Individual Loan</div>
+    <div class="content">
+        <form id="individual" action="/individual"method="post" style=”margin-right:5px”>
+
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Annual Income</span>
+            <input type="decimal" placeholder="Enter your annual income" id="Annual_income" name="Annual_income" required>
+          </div>
+          <div class="input-box">
+            <span class="details">DTI Score</span>
+            <input type="decimal" placeholder="Should be < 40" id="dti" name="dti" min="0" max="40" required>
+          </div>  
+          <div class="input-box">
+            <span class="details">Fico score</span>
+            <input type="number" placeholder="Should be >=850" id="Fico_score" name="Fico_score" required>
+          </div>
+         
+          <div class="input-box">
+            <span class="details">Loan amount</span>
+            <input type="number" placeholder="Loan amount" id="loan_amount" name="loan_amount" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Credit Line Open Date</span>
+            <input type="date" placeholder="Enter earliest credit line" id="earliest_credit_line" name="earliest_credit_line" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Mortgage A/C</span>
+            <input type="number" placeholder="No. of A/C" id="mort_account" name="mort_account" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Zipcode</span>
+            <input type="number" placeholder="First Two Digit only" id="Zip_code" name="Zip_code" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Open Cr. A/C</span>
+            <input type="number" placeholder="No of Cr A/c" id="open_account" name="open_account" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Total account</span>
+            <input type="number" placeholder="No of Total account" id="total_account" name="total_account" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Cr. Util</span>
+            <input type="decimal" placeholder="Credit Utilization" id="revol_util" name="revol_util" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Verification Status</span>
+            <input  list="verification_status" name="verification_status" placeholder="Select Options" required>
+           <datalist id="verification_status">
+           <option value="Source Verified">
+           <option value="Verified">
+           <option value="Not Verified">    
+            </datalist>
+          </div>
+          <div class="input-box">
+              <span class="details">Home Ownership</span>
+          <input list="home_ownership" name="home_ownership" placeholder="Select Options" required>
+          <datalist id="home_ownership">
+           <option value="MORTGAGE">
+           <option value="RENT">
+           <option value="OWN">
+           <option value="ANY">
+            <option value="OTHER">
+            <option value="NONE">
+        </datalist>
+        </div>
+        <div class="input-box">
+              <span class="details">Term</span>
+          <input  list="term" name="term" placeholder="36_Mon/60_Mon" required>
+          <datalist id="term">
+           <option value=36>
+           <option value=60>
+        </datalist>
+        </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Predict">
+        </div>
+        </form>
+  </div>
+ <br>
+ </div><div>
+						<h3><font color="white">{{pred}}</h3>
+                                  <h4><font color="white">{{apr}}
+                        <br>
+												{{emi}}
+                        <br>
+												{{cr_ratio}}
+                        <br>
+												{{inst_ratio}}
+                        <br>
+												{{cr_hist}}
+                        <br>
+												{{ln_risk}}
+                        <br>
+                      </font></h4> 
+              
+</div>
+        
+
+        
+         </section>
+    </body>
+</html>

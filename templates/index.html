@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Loan Status Predictor</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style2.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <section class="header">
+        <nav>
+            <a href="/">
+            <img src="{{url_for('static', filename='images/logo.png')}}" style="width: 100px;
+  height: 100px;">
+            </a>
+            <div class="nav-links">
+            <ul>
+                <li><a href="/" >HOME</a></li>
+                <li><a href="loanpred" >LOAN PREDICTION</a> </li>
+                <li><a href="individual" >INDIVIDUAL LOAN</a> </li>
+                <li><a href="joint" >JOINT LOAN</a> </li>
+                </ul></div>
+            
+        </nav>
+      <div class="text-box">
+            <h1>Predict your loan status !</h1>
+            <p> predicting your loan status is easy now. You just need to input some of your loan details and other data and you are good to go</p>
+            <a href="loanpred" class="hero-btn">Predict your loan status now</a>
+    </div>  
+        </section>
+    </body>
+</html>
