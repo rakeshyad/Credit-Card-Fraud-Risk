@@ -424,7 +424,7 @@ The first app refers to the filename app.py. The second app refers the instance 
 
 ### 7.	Browse deployed URL
    App Repository Link
-            https://lendingclubloanriskpredict-api.herokuapp.com/
+           - https://appcreditrisk.herokuapp.com/
             
 
 
